@@ -1,0 +1,24 @@
+<%-include("header")-%>
+<div class="box" id="heading">
+  <h1 ><%=listtitle%></h1>
+  <h2><%=today%></h2>
+</div>
+
+<div class="box">
+  <%  for(var i=0;i<it.length;i++){ %><!--since items is an array and it is parsed as value of items it also automatically becomes array -->
+<div class="item">
+  <input type="checkbox" >
+      <p><%=  it[i].title</title>%>  </p>
+      </div>
+
+    <%}%>
+
+
+
+  <form  class="item"action="/" method="post">
+    <input type="text" name="ip1" placeholder="enter your list item">
+    <button type="submit" name="button" value=<%=listtitle %>>+</button><!--vaue is specified as listtitle name in order to use if else statement in js page-->
+  </form>
+</div>
+
+<%-include("footer")-%>
